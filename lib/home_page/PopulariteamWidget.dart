@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_packet/NewestIteamWidget.dart';
+import 'package:food_packet/home_page/NewestIteamWidget.dart';
+import 'package:food_packet/product_details/iteampage2.dart';
+import 'package:food_packet/product_details/wburger.dart';
 
 class PopulariteamWidget extends StatelessWidget {
   @override
@@ -30,13 +32,18 @@ class PopulariteamWidget extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Column(
                         children: [
-                          Container(
-                            child: Image.asset(
-                              "images/burger.png",
-                              height: 100,
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, "iteampage");
+                            },
+                            child: Container(
+                              child: Image.asset(
+                                "images/wafer.png",
+                                height: 100,
+                              ),
                             ),
                           ),
-                          Text("Hot Burger",
+                          Text("Wafer",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                         ],
@@ -62,24 +69,29 @@ class PopulariteamWidget extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Column(
                         children: [
-                          Container(
-                            child: Image.asset(
-                              "images/burger.png",
-                              height: 100,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => wburger()));
+                            },
+                            child: Container(
+                              child: Image.asset(
+                                "images/colddrink.png",
+                                height: 100,
+                              ),
                             ),
                           ),
-                          Text("Hot Burger",
+                          Text("colddrink",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ))),
-
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
-                    width: 160,
-                    height: 110,
+                    width: 170,
+                    height: 125,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -95,23 +107,26 @@ class PopulariteamWidget extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Column(
                         children: [
-                          Container(
-                            child: Image.asset(
-                              "images/drink.png",
-                              height: 100,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => Itemdata()));
+                            },
+                            child: Container(
+                              child: Image.asset(
+                                "images/water.png",
+                                height: 100,
+                              ),
                             ),
                           ),
-                          Text("sting bottle",
+                          Text("water",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
-
-                          // Row(
-                          //   children: [],
-                          NewestIteamWidget(),
-                          // )
                         ],
                       ),
-                    )))
+                    ))),
           ])),
     );
   }

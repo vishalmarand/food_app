@@ -11,7 +11,9 @@ class AppBarWidget extends StatelessWidget {
       ),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Scaffold.of(context).openDrawer();
+          },
           child: Container(
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
@@ -45,7 +47,12 @@ class AppBarWidget extends StatelessWidget {
                 )
               ],
             ),
-            child: Icon(Icons.notifications),
+            child: Image.asset(
+              "images/wallet.png",
+              // height: 100,
+              //width: 130,
+            ),
+            // child: Icon(Icons.wallet),
           ),
         ),
       ]),

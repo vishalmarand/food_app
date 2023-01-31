@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_packet/HomePage.dart';
-import 'package:food_packet/signup.dart';
+import 'package:food_packet/Pages/HomePage.dart';
+import 'package:food_packet/Authenticattion/signup.dart';
 
 class LoginThree extends StatelessWidget {
   const LoginThree({super.key});
@@ -8,7 +8,7 @@ class LoginThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 66, 156, 189),
+      backgroundColor: Color.fromARGB(255, 173, 213, 227),
       body: ListView(
         children: <Widget>[
           SizedBox(height: (MediaQuery.of(context).size.height / 2) - 200),
@@ -17,8 +17,6 @@ class LoginThree extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 ClipPath(
-                  // clipper: RoundedDiagonalPathClipper(),
-
                   child: Container(
                     height: 450,
                     padding: EdgeInsets.all(10.0),
@@ -141,7 +139,7 @@ class LoginThree extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute<void>(
-                                builder: (context) => HomePage()));
+                                builder: (context) => signup()));
                       },
                       // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
                       child:

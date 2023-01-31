@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_packet/HomePage.dart';
-import 'package:food_packet/LoginThree.dart';
+import 'package:food_packet/Pages/HomePage.dart';
+import 'package:food_packet/Authenticattion/LoginThree.dart';
+import 'package:food_packet/Pages/bottomnav.dart';
 
 class signup extends StatefulWidget {
   const signup({Key? key}) : super(key: key);
@@ -143,7 +144,7 @@ class _signupState extends State<signup> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute<void>(
-                                        builder: (context) => HomePage()));
+                                        builder: (context) => bottomnav()));
                               }, // _trySubmitForm,
                               child: const Text('Sign Up')))
                     ],

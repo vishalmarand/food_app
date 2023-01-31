@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_packet/Pages/search.dart';
+
+import 'package:food_packet/product_details/iteampage.dart';
 
 class CategoriesWidget extends StatelessWidget {
   @override
@@ -25,7 +28,7 @@ class CategoriesWidget extends StatelessWidget {
                     )
                   ]),
               child: Image.asset(
-                "images/burger.png",
+                "images/colddrink.png",
                 width: 50,
                 height: 50,
               ),
@@ -47,7 +50,7 @@ class CategoriesWidget extends StatelessWidget {
                     )
                   ]),
               child: Image.asset(
-                "images/biryani.png",
+                "images/water.png",
                 width: 50,
                 height: 50,
               ),
@@ -69,7 +72,7 @@ class CategoriesWidget extends StatelessWidget {
                     )
                   ]),
               child: Image.asset(
-                "images/drink.png",
+                "images/fruit.png",
                 width: 50,
                 height: 50,
               ),
@@ -91,7 +94,7 @@ class CategoriesWidget extends StatelessWidget {
                     )
                   ]),
               child: Image.asset(
-                "images/pizza.png",
+                "images/namkeen.png",
                 width: 50,
                 height: 50,
               ),
@@ -113,7 +116,7 @@ class CategoriesWidget extends StatelessWidget {
                     )
                   ]),
               child: Image.asset(
-                "images/salan.png",
+                "images/wafer.png",
                 width: 50,
                 height: 50,
               ),

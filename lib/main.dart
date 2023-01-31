@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:food_packet/HomePage.dart';
-import 'package:food_packet/LoginThree.dart';
-import 'package:food_packet/homepage.dart';
-import 'package:food_packet/signup.dart';
+import 'package:food_packet/Authenticattion/introduction_screen.dart';
+import 'package:food_packet/Pages/HomePage.dart';
+import 'package:food_packet/Authenticattion/LoginThree.dart';
+import 'package:food_packet/Pages/bottomnav.dart';
+
+import 'package:food_packet/Authenticattion/signup.dart';
+import 'package:food_packet/causal_slider.dart';
+import 'package:food_packet/product_details/iteampage.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +22,11 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: {
-        "/": (context) => LoginThree(),
+        "/": (context) => introduction(),
+        // "/": (context) => bottomnav(),
+        // "/": (context) => causal_slider(),
+        // "bottomnav": (context) => bottomnav(),
+        "iteampage": (context) => iteampage(),
       },
     );
   }
