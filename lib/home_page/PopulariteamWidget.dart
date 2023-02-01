@@ -16,7 +16,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 125,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -46,6 +46,27 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("Wafer",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("RS 10",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
+                              Icon(
+                                Icons.favorite_border,
+                                color: Colors.red,
+                                size: 20,
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ))),
@@ -53,7 +74,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 125,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -84,6 +105,27 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("colddrink",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("RS 10",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
+                              Icon(
+                                Icons.favorite_border,
+                                color: Colors.red,
+                                size: 20,
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ))),
@@ -91,7 +133,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 125,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -124,6 +166,27 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("water",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("RS 10",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
+                              Icon(
+                                Icons.favorite_border,
+                                color: Colors.red,
+                                size: 20,
+                              )
+                            ],
+                          )
                         ],
                       ),
                     ))),

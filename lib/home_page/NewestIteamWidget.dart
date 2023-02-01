@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:food_packet/product_details/iteampage.dart';
@@ -16,7 +17,7 @@ class NewestIteamWidget extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
                 width: 380,
-                height: 150,
+                height: 180,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
@@ -44,7 +45,7 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -54,6 +55,27 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     Icon(
+                          //       Icons.favorite_border,
+                          //       color: Colors.red,
+                          //       size: 20,
+                          //     ),
+                          //     Icon(
+                          //       CupertinoIcons.cart,
+                          //       color: Colors.red,
+                          //       size: 20,
+                          //     )
+                          //   ],
+                          // ),
                           RatingBar.builder(
                             initialRating: 4,
                             minRating: 1,
@@ -66,10 +88,32 @@ class NewestIteamWidget extends StatelessWidget {
                               color: Colors.red,
                             ),
                             onRatingUpdate: (index) {},
-                          )
+                          ),
+                          Text("RS 10",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.favorite_border,
+                              color: Colors.red,
+                              size: 26,
+                            ),
+                            Icon(
+                              CupertinoIcons.cart,
+                              color: Colors.red,
+                              size: 26,
+                            )
+                          ],
+                        ))
                   ],
                 ),
               )),
@@ -105,7 +149,7 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -115,6 +159,27 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     Text("RS 10",
+                          //         style: TextStyle(
+                          //             color: Colors.red,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold)),
+                          //     Icon(
+                          //       Icons.favorite_border,
+                          //       color: Colors.red,
+                          //       size: 20,
+                          //     )
+                          //   ],
+                          // ),
                           RatingBar.builder(
                             initialRating: 4,
                             minRating: 1,
@@ -127,10 +192,32 @@ class NewestIteamWidget extends StatelessWidget {
                               color: Colors.red,
                             ),
                             onRatingUpdate: (index) {},
-                          )
+                          ),
+                          Text("RS 10",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.favorite_border,
+                              color: Colors.red,
+                              size: 26,
+                            ),
+                            Icon(
+                              CupertinoIcons.cart,
+                              color: Colors.red,
+                              size: 26,
+                            )
+                          ],
+                        ))
                   ],
                 ),
               )),
@@ -166,7 +253,7 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -176,6 +263,23 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //
+                          //     Icon(
+                          //       Icons.favorite_border,
+                          //       color: Colors.red,
+                          //       size: 20,
+                          //     )
+                          //   ],
+                          // ),
                           RatingBar.builder(
                             initialRating: 4,
                             minRating: 1,
@@ -188,10 +292,32 @@ class NewestIteamWidget extends StatelessWidget {
                               color: Colors.red,
                             ),
                             onRatingUpdate: (index) {},
-                          )
+                          ),
+                          Text("RS 10",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.favorite_border,
+                              color: Colors.red,
+                              size: 26,
+                            ),
+                            Icon(
+                              CupertinoIcons.cart,
+                              color: Colors.red,
+                              size: 26,
+                            )
+                          ],
+                        ))
                   ],
                 ),
               )),
@@ -227,7 +353,7 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -237,6 +363,27 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     Text("RS 10",
+                          //         style: TextStyle(
+                          //             color: Colors.red,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold)),
+                          //     Icon(
+                          //       Icons.favorite_border,
+                          //       color: Colors.red,
+                          //       size: 20,
+                          //     )
+                          //   ],
+                          // ),
                           RatingBar.builder(
                             initialRating: 4,
                             minRating: 1,
@@ -249,10 +396,32 @@ class NewestIteamWidget extends StatelessWidget {
                               color: Colors.red,
                             ),
                             onRatingUpdate: (index) {},
-                          )
+                          ),
+                          Text("RS 10",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.favorite_border,
+                              color: Colors.red,
+                              size: 26,
+                            ),
+                            Icon(
+                              CupertinoIcons.cart,
+                              color: Colors.red,
+                              size: 26,
+                            )
+                          ],
+                        )),
                   ],
                 ),
               )),
@@ -288,7 +457,7 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -298,6 +467,27 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     Text("RS 10",
+                          //         style: TextStyle(
+                          //             color: Colors.red,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold)),
+                          //     Icon(
+                          //       Icons.favorite_border,
+                          //       color: Colors.red,
+                          //       size: 20,
+                          //     )
+                          //   ],
+                          // ),
                           RatingBar.builder(
                             initialRating: 4,
                             minRating: 1,
@@ -310,10 +500,32 @@ class NewestIteamWidget extends StatelessWidget {
                               color: Colors.red,
                             ),
                             onRatingUpdate: (index) {},
-                          )
+                          ),
+                          Text("RS 10",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.favorite_border,
+                              color: Colors.red,
+                              size: 26,
+                            ),
+                            Icon(
+                              CupertinoIcons.cart,
+                              color: Colors.red,
+                              size: 26,
+                            )
+                          ],
+                        ))
                   ],
                 ),
               )),
