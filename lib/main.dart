@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: {
-        "/": (context) => MyLogin(),
-        // "/": (context) => bottomnav(),
+        //"/": (context) => MyLogin(),
+        "/": (context) => bottomnav(),
         // "/": (context) => causal_slider(),
         // "bottomnav": (context) => bottomnav(),
         "iteampage": (context) => iteampage(),

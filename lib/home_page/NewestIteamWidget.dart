@@ -50,7 +50,7 @@ class NewestIteamWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text("WAFER",
+                          Text("Wafer",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -58,24 +58,178 @@ class NewestIteamWidget extends StatelessWidget {
                           Text("Taste our chips",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
-                          // SizedBox(
-                          //   height: 12,
-                          // ),
-                          // Row(
-                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //   children: [
-                          //     Icon(
-                          //       Icons.favorite_border,
-                          //       color: Colors.red,
-                          //       size: 20,
-                          //     ),
-                          //     Icon(
-                          //       CupertinoIcons.cart,
-                          //       color: Colors.red,
-                          //       size: 20,
-                          //     )
-                          //   ],
-                          // ),
+                          RatingBar.builder(
+                            initialRating: 4,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            itemCount: 5,
+                            itemSize: 18,
+                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                            itemBuilder: (context, _) => Icon(
+                              Icons.star,
+                              color: Colors.red,
+                            ),
+                            onRatingUpdate: (index) {},
+                          ),
+                          Text("RS 10",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.favorite_border,
+                              color: Colors.red,
+                              size: 26,
+                            ),
+                            Icon(
+                              CupertinoIcons.cart,
+                              color: Colors.red,
+                              size: 26,
+                            )
+                          ],
+                        ))
+                  ],
+                ),
+              )),
+          Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Container(
+                width: 380,
+                height: 180,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: Offset(0, 3),
+                      )
+                    ]),
+                child: Row(
+                  children: [
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => iteampage()));
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          child: Image.asset(
+                            "images/sweets.png",
+                            height: 100,
+                            width: 130,
+                          ),
+                        )),
+                    Container(
+                      width: 170,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text("sweets",
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              )),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          RatingBar.builder(
+                            initialRating: 4,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            itemCount: 5,
+                            itemSize: 18,
+                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                            itemBuilder: (context, _) => Icon(
+                              Icons.star,
+                              color: Colors.red,
+                            ),
+                            onRatingUpdate: (index) {},
+                          ),
+                          Text("RS 10",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.favorite_border,
+                              color: Colors.red,
+                              size: 26,
+                            ),
+                            Icon(
+                              CupertinoIcons.cart,
+                              color: Colors.red,
+                              size: 26,
+                            )
+                          ],
+                        ))
+                  ],
+                ),
+              )),
+          Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Container(
+                width: 380,
+                height: 180,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 10,
+                        offset: Offset(0, 3),
+                      )
+                    ]),
+                child: Row(
+                  children: [
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => iteampage()));
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          child: Image.asset(
+                            "images/chocolate.png",
+                            height: 100,
+                            width: 130,
+                          ),
+                        )),
+                    Container(
+                      width: 170,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text("chocolate",
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              )),
+                          Text("Taste our chips",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
                           RatingBar.builder(
                             initialRating: 4,
                             minRating: 1,
@@ -154,7 +308,7 @@ class NewestIteamWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text("DRINK",
+                          Text("Drink",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -258,7 +412,7 @@ class NewestIteamWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text("COLD DRINK",
+                          Text("Cold Drink",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
