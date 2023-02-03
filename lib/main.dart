@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_packet/Authenticattion/introduction_screen.dart';
 import 'package:food_packet/Authenticattion/login.dart';
+import 'package:food_packet/Authenticattion/phone.dart';
 import 'package:food_packet/Pages/HomePage.dart';
 import 'package:food_packet/Authenticattion/LoginThree.dart';
 import 'package:food_packet/Pages/bottomnav.dart';
@@ -23,8 +24,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: {
-        //"/": (context) => MyLogin(),
-        "/": (context) => bottomnav(),
+        "/": (context) => MyPhone(),
+        //"/": (context) => bottomnav(),
         // "/": (context) => causal_slider(),
         // "bottomnav": (context) => bottomnav(),
         "iteampage": (context) => iteampage(),

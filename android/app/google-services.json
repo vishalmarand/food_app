@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "437164747157",
+    "project_id": "phonelogin-7a261",
+    "storage_bucket": "phonelogin-7a261.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437164747157:android:1c1bc3580d68c502256e9c",
+        "android_client_info": {
+          "package_name": "com.example.food_packet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437164747157-i6lq8fri3dnigblpq20eda5gbsphvp0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmZtXD612JIjzwxg_aDtYj9FiNqws8Mxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437164747157-i6lq8fri3dnigblpq20eda5gbsphvp0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_packet/Authenticattion/verify.dart';
 
 class MyPhone extends StatefulWidget {
   const MyPhone({Key? key}) : super(key: key);
@@ -105,7 +106,8 @@ class _MyPhoneState extends State<MyPhone> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(0.1))),
                         onPressed: () {
-                          Navigator.pushNamed(context, 'verify');
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => MyVerify()));
                         },
                         child: Text("Continue")),
                   ),
@@ -122,7 +124,7 @@ class _MyPhoneState extends State<MyPhone> {
             bottom: -57,
             left: 0,
             child: Image.asset(
-              'assets/p.png',
+              'images/p.png',
               height: 400,
               width: 380,
             ),

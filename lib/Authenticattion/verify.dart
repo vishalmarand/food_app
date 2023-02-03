@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_packet/Authenticattion/login.dart';
 import 'package:pinput/pinput.dart';
 
 class MyVerify extends StatefulWidget {
@@ -74,7 +75,7 @@ class _MyVerifyState extends State<MyVerify> {
                 textAlign: TextAlign.center,
               ),
               Image.asset(
-                'assets/otp.png',
+                'images/otp.png',
                 width: 150,
                 height: 150,
               ),
@@ -114,7 +115,8 @@ class _MyVerifyState extends State<MyVerify> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
                     onPressed: () {
-                      Navigator.pushNamed(context, 'homepage');
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => MyLogin()));
                     },
                     child: Text("Verify Phone Number")),
               ),

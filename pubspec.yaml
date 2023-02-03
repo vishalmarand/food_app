@@ -43,8 +43,9 @@ dependencies:
   introduction_slider: ^2.0.1
   carousel_slider: ^4.2.1
   pinput: ^2.2.21
-
-
+  firebase_core: ^2.4.1
+  firebase_auth: ^4.2.5
+ 
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_packet/Authenticattion/phone.dart';
 import 'package:food_packet/Authenticattion/register.dart';
 import 'package:food_packet/Pages/bottomnav.dart';
 
@@ -116,7 +117,12 @@ class _MyLoginState extends State<MyLogin> {
                                 style: ButtonStyle(),
                               ),
                               TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (_) => MyPhone()));
+                                  },
                                   child: Text(
                                     'Forgot Password',
                                     style: TextStyle(
