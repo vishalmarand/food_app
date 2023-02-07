@@ -69,6 +69,13 @@ class Drawerwidget extends StatelessWidget {
             ),
             title: Text("Privacy Policy"),
           ),
+          ListTile(
+            leading: Icon(
+              Icons.logout_rounded,
+              color: Colors.black,
+            ),
+            title: Text("Log_Out"),
+          ),
         ],
       ),
     );
