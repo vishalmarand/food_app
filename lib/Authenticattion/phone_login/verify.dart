@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food_packet/Authenticattion/login.dart';
+import 'package:food_packet/Authenticattion/Email_login/login.dart';
+import 'package:food_packet/Authenticattion/phone_login/phone.dart';
+import 'package:food_packet/Pages/bottomnav.dart';
 import 'package:pinput/pinput.dart';
 
 class MyVerify extends StatefulWidget {
@@ -10,6 +13,8 @@ class MyVerify extends StatefulWidget {
 }
 
 class _MyVerifyState extends State<MyVerify> {
+  final FirebaseAuth auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
@@ -35,7 +40,7 @@ class _MyVerifyState extends State<MyVerify> {
         color: Color.fromRGBO(234, 239, 243, 1),
       ),
     );
-
+    var code = "";
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -86,7 +91,10 @@ class _MyVerifyState extends State<MyVerify> {
                 height: 0,
               ),
               Pinput(
-                length: 4,
+                length: 6,
+                onChanged: ((value) {
+                  code = value;
+                }),
                 defaultPinTheme: defaultPinTheme,
                 focusedPinTheme: focusedPinTheme,
                 submittedPinTheme: submittedPinTheme,
@@ -114,9 +122,22 @@ class _MyVerifyState extends State<MyVerify> {
                         primary: Colors.blue.shade600,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => MyLogin()));
+                    onPressed: () async {
+                      try {
+                        // Navigator.push(context,
+                        PhoneAuthCredential credential =
+                            PhoneAuthProvider.credential(
+                                verificationId: MyPhone.verify, smsCode: code);
+                        // ANDROID ONLY!
+
+                        // Sign the user in (or link) with the auto-generated credential
+                        await auth.signInWithCredential(credential);
+
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => bottomnav()));
+
+                        //     MaterialPageRoute(builder: (_) => MyLogin()));
+                      } catch (e) {}
                     },
                     child: Text("Verify Phone Number")),
               ),

@@ -1,16 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:food_packet/Authenticattion/introduction_screen.dart';
-import 'package:food_packet/Authenticattion/login.dart';
-import 'package:food_packet/Authenticattion/phone.dart';
-import 'package:food_packet/Pages/HomePage.dart';
-import 'package:food_packet/Authenticattion/LoginThree.dart';
-import 'package:food_packet/Pages/bottomnav.dart';
-
-import 'package:food_packet/Authenticattion/signup.dart';
-import 'package:food_packet/causal_slider.dart';
+import 'package:food_packet/Authenticattion/Email_login/Email_second/login_screen.dart';
 import 'package:food_packet/product_details/iteampage.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -24,7 +19,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: {
-        "/": (context) => MyPhone(),
+        "/": (context) => login_Screen(),
+        //for phon login
+        // "/": (context) => MyPhone(),
+        //homepage direct
         //"/": (context) => bottomnav(),
         // "/": (context) => causal_slider(),
         // "bottomnav": (context) => bottomnav(),

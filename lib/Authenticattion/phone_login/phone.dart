@@ -1,16 +1,18 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food_packet/Authenticattion/verify.dart';
+import 'package:food_packet/Authenticattion/phone_login/verify.dart';
 
 class MyPhone extends StatefulWidget {
   const MyPhone({Key? key}) : super(key: key);
 
+  static String verify = "";
   @override
   State<MyPhone> createState() => _MyPhoneState();
 }
 
 class _MyPhoneState extends State<MyPhone> {
   TextEditingController countryController = TextEditingController();
-
+  var phone = "";
   @override
   void initState() {
     // TODO: implement initState
@@ -84,6 +86,9 @@ class _MyPhoneState extends State<MyPhone> {
                         Expanded(
                             child: TextField(
                           keyboardType: TextInputType.phone,
+                          onChanged: (value) {
+                            phone = value;
+                          },
                           decoration: InputDecoration(
                             fillColor: Colors.white,
                             filled: true,
@@ -105,9 +110,23 @@ class _MyPhoneState extends State<MyPhone> {
                             primary: Colors.blue.shade600,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(0.1))),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => MyVerify()));
+                        onPressed: () async {
+                          await FirebaseAuth.instance.verifyPhoneNumber(
+                            phoneNumber: '${countryController.text + phone}',
+                            verificationCompleted:
+                                (PhoneAuthCredential credential) {},
+                            verificationFailed: (FirebaseAuthException e) {},
+                            codeSent:
+                                (String verificationId, int? resendToken) {
+                              MyPhone.verify = verificationId;
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => MyVerify()));
+                            },
+                            codeAutoRetrievalTimeout:
+                                (String verificationId) {},
+                          );
                         },
                         child: Text("Continue")),
                   ),

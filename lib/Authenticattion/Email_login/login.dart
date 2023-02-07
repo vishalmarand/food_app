@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_packet/Authenticattion/phone.dart';
-import 'package:food_packet/Authenticattion/register.dart';
+import 'package:food_packet/Authenticattion/phone_login/phone.dart';
+import 'package:food_packet/Authenticattion/Email_login/register.dart';
 import 'package:food_packet/Pages/bottomnav.dart';
 
 class MyLogin extends StatefulWidget {
