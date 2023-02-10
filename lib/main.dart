@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:food_packet/Authenticattion/Email_login/Email_second/login_screen.dart';
+import 'package:food_packet/Pages/bottomnav.dart';
 import 'package:food_packet/product_details/iteampage.dart';
 
 Future<void> main() async {
@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: {
-        "/": (context) => login_Screen(),
+        //"/": (context) => login_Screen(),
         //for phon login
         // "/": (context) => MyPhone(),
         //homepage direct
-        //"/": (context) => bottomnav(),
+        "/": (context) => bottomnav(),
         // "/": (context) => causal_slider(),
         // "bottomnav": (context) => bottomnav(),
         "iteampage": (context) => iteampage(),

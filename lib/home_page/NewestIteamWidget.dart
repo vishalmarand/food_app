@@ -1,3 +1,4 @@
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -40,12 +41,12 @@ class NewestIteamWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Image.asset(
                             "images/wafer.png",
-                            height: 100,
-                            width: 130,
+                            height: 80,
+                            width: 80,
                           ),
                         )),
                     Container(
-                      width: 170,
+                      width: 180,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -84,10 +85,10 @@ class NewestIteamWidget extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.red,
-                              size: 26,
+                            FavoriteButton(
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
                             ),
                             Icon(
                               CupertinoIcons.cart,
@@ -102,7 +103,7 @@ class NewestIteamWidget extends StatelessWidget {
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
-                width: 380,
+                width: 400,
                 height: 180,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -126,12 +127,13 @@ class NewestIteamWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Image.asset(
                             "images/sweets.png",
-                            height: 100,
-                            width: 130,
+                            height: 80,
+                            width: 80,
                           ),
                         )),
                     Container(
-                      width: 170,
+                      height: 250,
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -170,10 +172,10 @@ class NewestIteamWidget extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.red,
-                              size: 26,
+                            FavoriteButton(
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
                             ),
                             Icon(
                               CupertinoIcons.cart,
@@ -212,8 +214,8 @@ class NewestIteamWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Image.asset(
                             "images/chocolate.png",
-                            height: 100,
-                            width: 130,
+                            height: 80,
+                            width: 80,
                           ),
                         )),
                     Container(
@@ -256,10 +258,10 @@ class NewestIteamWidget extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.red,
-                              size: 26,
+                            FavoriteButton(
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
                             ),
                             Icon(
                               CupertinoIcons.cart,
@@ -298,8 +300,8 @@ class NewestIteamWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Image.asset(
                             "images/drink.png",
-                            height: 100,
-                            width: 130,
+                            height: 80,
+                            width: 80,
                           ),
                         )),
                     Container(
@@ -360,10 +362,10 @@ class NewestIteamWidget extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.red,
-                              size: 26,
+                            FavoriteButton(
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
                             ),
                             Icon(
                               CupertinoIcons.cart,
@@ -402,8 +404,8 @@ class NewestIteamWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Image.asset(
                             "images/colddrink.png",
-                            height: 100,
-                            width: 130,
+                            height: 80,
+                            width: 80,
                           ),
                         )),
                     Container(
@@ -460,10 +462,10 @@ class NewestIteamWidget extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.red,
-                              size: 26,
+                            FavoriteButton(
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
                             ),
                             Icon(
                               CupertinoIcons.cart,
@@ -502,8 +504,8 @@ class NewestIteamWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Image.asset(
                             "images/water.png",
-                            height: 100,
-                            width: 130,
+                            height: 80,
+                            width: 80,
                           ),
                         )),
                     Container(
@@ -564,10 +566,10 @@ class NewestIteamWidget extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.red,
-                              size: 26,
+                            FavoriteButton(
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
                             ),
                             Icon(
                               CupertinoIcons.cart,
@@ -606,8 +608,8 @@ class NewestIteamWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Image.asset(
                             "images/fruit.png",
-                            height: 100,
-                            width: 130,
+                            height: 80,
+                            width: 80,
                           ),
                         )),
                     Container(
@@ -668,10 +670,10 @@ class NewestIteamWidget extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.red,
-                              size: 26,
+                            FavoriteButton(
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
                             ),
                             Icon(
                               CupertinoIcons.cart,

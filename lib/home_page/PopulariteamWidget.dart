@@ -1,3 +1,4 @@
+import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:food_packet/home_page/NewestIteamWidget.dart';
 import 'package:food_packet/product_details/iteampage2.dart';
@@ -16,7 +17,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 200,
+                    height: 240,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -60,11 +61,17 @@ class PopulariteamWidget extends StatelessWidget {
                                       color: Colors.red,
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold)),
-                              Icon(
-                                Icons.favorite_border,
-                                color: Colors.red,
-                                size: 20,
-                              )
+                              FavoriteButton(
+                                valueChanged: (_isFavorite) {
+                                  print('Is Favorite $_isFavorite)');
+                                },
+                              ),
+
+                              // Icon(
+                              //   Icons.favorite_border,
+                              //   color: Colors.red,
+                              //   size: 20,
+                              // )
                             ],
                           )
                         ],
@@ -74,7 +81,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 200,
+                    height: 230,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -119,11 +126,11 @@ class PopulariteamWidget extends StatelessWidget {
                                       color: Colors.red,
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold)),
-                              Icon(
-                                Icons.favorite_border,
-                                color: Colors.red,
-                                size: 20,
-                              )
+                              FavoriteButton(
+                                valueChanged: (_isFavorite) {
+                                  print('Is Favorite $_isFavorite)');
+                                },
+                              ),
                             ],
                           )
                         ],
@@ -133,7 +140,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 200,
+                    height: 230,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -180,11 +187,11 @@ class PopulariteamWidget extends StatelessWidget {
                                       color: Colors.red,
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold)),
-                              Icon(
-                                Icons.favorite_border,
-                                color: Colors.red,
-                                size: 20,
-                              )
+                              FavoriteButton(
+                                valueChanged: (_isFavorite) {
+                                  print('Is Favorite $_isFavorite)');
+                                },
+                              ),
                             ],
                           )
                         ],
