@@ -112,7 +112,7 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("colddrink",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
-                          Text("Taste our chips",
+                          Text("Taste our Product",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                           SizedBox(
@@ -173,7 +173,7 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("water",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
-                          Text("Taste our chips",
+                          Text("Taste our product",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                           SizedBox(

@@ -143,7 +143,7 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
-                          Text("Taste our chips",
+                          Text("Taste our product",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                           RatingBar.builder(

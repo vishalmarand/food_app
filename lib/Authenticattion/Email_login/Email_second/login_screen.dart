@@ -82,6 +82,7 @@ class _login_ScreenState extends State<login_Screen> {
           if (!regex.hasMatch(value)) {
             return ("Enter Valid Password(Min. 6 Character)");
           }
+          return null;
         },
         textInputAction: TextInputAction.done,
         obscureText: _isSecurePassword,
