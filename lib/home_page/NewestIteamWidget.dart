@@ -17,7 +17,7 @@ class NewestIteamWidget extends StatelessWidget {
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
-                width: 380,
+                width: 400,
                 height: 180,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -46,7 +46,8 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 180,
+                      height: 250,
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -190,7 +191,7 @@ class NewestIteamWidget extends StatelessWidget {
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
-                width: 380,
+                width: 400,
                 height: 180,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -219,7 +220,8 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 170,
+                      height: 250,
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -276,8 +278,8 @@ class NewestIteamWidget extends StatelessWidget {
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
-                width: 380,
-                height: 150,
+                width: 400,
+                height: 180,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
@@ -305,7 +307,8 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 170,
+                      height: 250,
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -409,7 +412,8 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 170,
+                      height: 250,
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -509,7 +513,8 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 170,
+                      height: 250,
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -613,7 +618,8 @@ class NewestIteamWidget extends StatelessWidget {
                           ),
                         )),
                     Container(
-                      width: 170,
+                      height: 250,
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,

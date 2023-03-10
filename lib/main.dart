@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:food_packet/Authenticattion/Email_login/Email_second/login_screen.dart';
+import 'package:food_packet/Authenticattion/introduction_screen.dart';
 import 'package:food_packet/Authenticattion/phone_login/phone.dart';
 
 import 'package:food_packet/Pages/bottomnav.dart';
@@ -23,9 +24,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: {
-        //"/": (context) => login_Screen(),
+        "/": (context) => introduction(),
         //for phon login
-        "/": (context) => MyPhone(),
+        //"/": (context) => MyPhone(),
         //homepage direct
         //"/": (context) => bottomnav(),
         // "/": (context) => causal_slider(),

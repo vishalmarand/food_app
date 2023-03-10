@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_packet/Authenticattion/Email_login/Email_second/registration_screen.dart';
+import 'package:food_packet/Authenticattion/phone_login/phone.dart';
 import 'package:food_packet/Pages/bottomnav.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -96,6 +97,7 @@ class _login_ScreenState extends State<login_Screen> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
             )));
+            
 
     final loginButton = Material(
       elevation: 5,
@@ -150,12 +152,29 @@ class _login_ScreenState extends State<login_Screen> {
                     height: 30,
                   ),
                   //add forgot button and gap
-                  Text("Forgot Password"),
-                  SizedBox(height: 10),
+
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MyPhone()));
+                    },
+                    child: new Padding(
+                      padding: new EdgeInsets.all(10.0),
+                      child: new Text(
+                          style: GoogleFonts.roboto(
+                              color: Color(hexColor('#1B70D6')),
+                              fontWeight: FontWeight.w900,
+                              fontSize: 15),
+                          "Login with Phone Number"),
+                    ),
+                  ),
+
                   loginButton,
+
                   SizedBox(
                     height: 45,
                   ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -168,7 +187,7 @@ class _login_ScreenState extends State<login_Screen> {
                                   builder: (context) => RegistrationScreen()));
                         },
                         child: Text(
-                          "SignUp",
+                          "sign up",
                           style: GoogleFonts.roboto(
                               color: Color(hexColor('#1B70D6')),
                               fontWeight: FontWeight.w900,
@@ -176,7 +195,7 @@ class _login_ScreenState extends State<login_Screen> {
                         ),
                       )
                     ],
-                  )
+                  ),
                 ],
               )),
         ))),

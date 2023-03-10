@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food_packet/Authenticattion/Email_login/login.dart';
 import 'package:food_packet/Authenticattion/phone_login/phone.dart';
 import 'package:food_packet/Pages/bottomnav.dart';
 import 'package:pinput/pinput.dart';

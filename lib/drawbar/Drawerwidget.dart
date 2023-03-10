@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_packet/Authenticattion/Email_login/Email_second/login_screen.dart';
 
 class Drawerwidget extends StatelessWidget {
   const Drawerwidget({super.key});
@@ -70,12 +71,26 @@ class Drawerwidget extends StatelessWidget {
             title: Text("Privacy Policy"),
           ),
           ListTile(
-            leading: Icon(
-              Icons.logout_rounded,
-              color: Colors.black,
+            onTap: () async {
+              //await AuthClient.internal().signOut();
+              Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (c) => login_Screen()),
+                  (r) => false);
+            },
+            leading: Icon(Icons.power_settings_new, color: Colors.black),
+            title: Text(
+              "Logout",
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
-            title: Text("Log_Out"),
           ),
+          // ListTile(
+          //   leading: Icon(
+          //     Icons.logout_rounded,
+          //     color: Colors.black,
+          //   ),
+          //   title: Text("Log_Out"),
+          // ),
         ],
       ),
     );

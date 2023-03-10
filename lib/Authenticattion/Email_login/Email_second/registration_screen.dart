@@ -132,7 +132,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           firstNameEditingController.text = value!;
         },
         textInputAction: TextInputAction.next,
-        obscureText: _isSecurePassword,
+        obscureText: !_isSecurePassword,
         decoration: InputDecoration(
           fillColor: Colors.white,
           filled: true,
@@ -161,7 +161,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           confirmPasswordEditingController.text = value!;
         },
         textInputAction: TextInputAction.done,
-        obscureText: _isSecurePassword,
+        obscureText: !_isSecurePassword,
         decoration: InputDecoration(
           fillColor: Colors.white,
           filled: true,
@@ -276,14 +276,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   Widget togglePassword() {
     return IconButton(
+      icon: _isSecurePassword
+          ? Icon(Icons.visibility)
+          : Icon(Icons.visibility_off),
       onPressed: () {
         setState(() {
           _isSecurePassword = !_isSecurePassword;
         });
       },
-      icon: _isSecurePassword
-          ? Icon(Icons.visibility_off)
-          : Icon(Icons.visibility),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:food_packet/home_page/NewestIteamWidget.dart';
+import 'package:food_packet/product_details/iteampage.dart';
 import 'package:food_packet/product_details/iteampage2.dart';
 import 'package:food_packet/product_details/wburger.dart';
 
@@ -17,7 +18,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 240,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -35,7 +36,10 @@ class PopulariteamWidget extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, "iteampage");
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => iteampage()));
                             },
                             child: Container(
                               child: Image.asset(
@@ -53,35 +57,37 @@ class PopulariteamWidget extends StatelessWidget {
                           SizedBox(
                             height: 12,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("RS 10",
-                                  style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
-                              FavoriteButton(
-                                valueChanged: (_isFavorite) {
-                                  print('Is Favorite $_isFavorite)');
-                                },
-                              ),
 
-                              // Icon(
-                              //   Icons.favorite_border,
-                              //   color: Colors.red,
-                              //   size: 20,
-                              // )
-                            ],
-                          )
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     Text("RS 10",
+                          //         style: TextStyle(
+                          //             color: Colors.red,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold)),
+                          //     FavoriteButton(
+                          //       valueChanged: (_isFavorite) {
+                          //         print('Is Favorite $_isFavorite)');
+                          //       },
+                          //     ),
+
+                          // Icon(
+                          //   Icons.favorite_border,
+                          //   color: Colors.red,
+                          //   size: 20,
+                          //     // )
+                          //   ],
+                          // )
                         ],
                       ),
                     ))),
+
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 230,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -118,21 +124,21 @@ class PopulariteamWidget extends StatelessWidget {
                           SizedBox(
                             height: 12,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("RS 10",
-                                  style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
-                              FavoriteButton(
-                                valueChanged: (_isFavorite) {
-                                  print('Is Favorite $_isFavorite)');
-                                },
-                              ),
-                            ],
-                          )
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     Text("RS 10",
+                          //         style: TextStyle(
+                          //             color: Colors.red,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold)),
+                          //     FavoriteButton(
+                          //       valueChanged: (_isFavorite) {
+                          //         print('Is Favorite $_isFavorite)');
+                          //       },
+                          //     ),
+                          //   ],
+                          // )
                         ],
                       ),
                     ))),
@@ -140,7 +146,7 @@ class PopulariteamWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
                     width: 170,
-                    height: 230,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -179,21 +185,21 @@ class PopulariteamWidget extends StatelessWidget {
                           SizedBox(
                             height: 12,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("RS 10",
-                                  style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
-                              FavoriteButton(
-                                valueChanged: (_isFavorite) {
-                                  print('Is Favorite $_isFavorite)');
-                                },
-                              ),
-                            ],
-                          )
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //   children: [
+                          //     Text("RS 10",
+                          //         style: TextStyle(
+                          //             color: Colors.red,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold)),
+                          //     FavoriteButton(
+                          //       valueChanged: (_isFavorite) {
+                          //         print('Is Favorite $_isFavorite)');
+                          //       },
+                          //     ),
+                          //   ],
+                          // )
                         ],
                       ),
                     ))),

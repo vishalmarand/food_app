@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_packet/Authenticattion/LoginThree.dart';
-
+import 'package:food_packet/Authenticattion/Email_login/Email_second/login_screen.dart';
 import 'package:introduction_slider/introduction_slider.dart';
 
 class introduction extends StatelessWidget {
@@ -34,7 +33,7 @@ class introduction extends StatelessWidget {
       ],
       done: Done(
         child: Icon(Icons.done),
-        home: LoginThree(),
+        home: login_Screen(),
       ),
       next: Next(child: Icon(Icons.arrow_forward)),
       back: Back(child: Icon(Icons.arrow_back)),

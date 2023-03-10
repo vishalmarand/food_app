@@ -1,42 +1,74 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:food_packet/apis/category_apis.dart';
+import 'package:food_packet/model/category_data_model.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: const Text('Settings'),
       ),
       body: ListView(
         children: <Widget>[
           ListTile(
-            leading: Icon(Icons.account_circle),
-            title: Text('Account'),
+            leading: const Icon(Icons.account_circle),
+            title: const Text('Account'),
             onTap: () {
               // Navigate to account settings
             },
           ),
           ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Notifications'),
+            leading: const Icon(Icons.notifications),
+            title: const Text('Notifications'),
             onTap: () {
               // Navigate to notification settings
             },
           ),
           ListTile(
-            leading: Icon(Icons.security),
-            title: Text('Security'),
+            leading:const  Icon(Icons.security),
+            title:const  Text('Security'),
             onTap: () {
               // Navigate to security settings
             },
           ),
+          // FutureBuilder(
+          //   future: getAllCategories(),
+          //   builder: (context, snapshot) {
+          //     if (snapshot.connectionState == ConnectionState.done) {
+          //       List<CategoryItem> allCategories =
+          //           snapshot.data as List<CategoryItem>;
+          //       return Row(
+          //         children: allCategories
+          //             .map(
+          //               (e) => SizedBox(
+          //                 height: 50,
+          //                 width: 50,
+          //                 child: Column(
+          //                   children: [
+          //                     Expanded(
+          //                       child: CachedNetworkImage(
+          //                         imageUrl: e.image,
+          //                       ),
+          //                     ),
+          //                     Text(e.title),
+          //                   ],
+          //                 ),
+          //               ),
+          //             )
+          //             .toList(),
+          //       );
+          //     } else {
+          //       return const CircularProgressIndicator();
+          //     }
+          //   },
+          // )
         ],
       ),
     );
   }
 }
-
-
 
 // import 'package:flutter/material.dart';
 
