@@ -43,7 +43,7 @@ class _MyPhoneState extends State<MyPhone> {
                     height: 10,
                   ),
                   Text(
-                    "You Will Recieve 4 digit OTP to verify next",
+                    "You Will Recieve 6 digit OTP to verify next",
                     style: TextStyle(
                       fontSize: 16,
                     ),

@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:food_packet/model/ordersuccesfull.dart';
 import 'package:food_packet/product_details/iteam_product_order.dart';
+import 'package:food_packet/product_details/wburger.dart';
 
-class wnamkeen extends StatelessWidget {
-  const wnamkeen({super.key});
+class wfruit extends StatelessWidget {
+  const wfruit({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class wnamkeen extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         title: Text(
-          "namkeen",
+          "fruit",
           style: TextStyle(
             color: Colors.black,
             fontSize: 20,
@@ -51,7 +52,7 @@ class wnamkeen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Image.asset(
-                "images/namkeen.png",
+                "images/fruit.png",
                 height: 300,
                 width: 300,
               ),
@@ -112,7 +113,7 @@ class wnamkeen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "wafer",
+                                  "fruit",
                                   style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.bold,
@@ -154,7 +155,7 @@ class wnamkeen extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Haldiram's bhujia is the most popular namkeen in India. ",
+                              "Taste our chips i is good your heath and it is very testy try this product,",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -164,7 +165,7 @@ class wnamkeen extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Other than this, chana jorgaram, navratan mixture and moong dal are famous namkeens.",
+                              "Taste our chips i is good your heath and it is very testy try this product,",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -203,12 +204,17 @@ class wnamkeen extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )),
+                  ))
             ],
           ),
         ),
       ])),
-     bottomNavigationBar: iteam_order(onPressed: () {  },),
+      bottomNavigationBar: iteam_order(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => ThankYouPage()));
+        },
+      ),
     );
   }
 }

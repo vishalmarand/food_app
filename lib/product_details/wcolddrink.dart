@@ -5,8 +5,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:food_packet/model/ordersuccesfull.dart';
 import 'package:food_packet/product_details/iteam_product_order.dart';
 
-class wnamkeen extends StatelessWidget {
-  const wnamkeen({super.key});
+class wcolddrink extends StatelessWidget {
+  const wcolddrink({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class wnamkeen extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         title: Text(
-          "namkeen",
+          " COLD DRINK",
           style: TextStyle(
             color: Colors.black,
             fontSize: 20,
@@ -23,16 +23,6 @@ class wnamkeen extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.white,
-        // leading: IconButton(
-        //   icon: const Icon(
-        //     Icons.arrow_back,
-        //   ),
-        //   color: Colors.black,
-        //   onPressed: () {
-        //     // Navigator.push(
-        //     // context, MaterialPageRoute(builder: (_) => Vegetable()));
-        //   },
-        // ),
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
@@ -51,7 +41,7 @@ class wnamkeen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Image.asset(
-                "images/namkeen.png",
+                "images/c.png",
                 height: 300,
                 width: 300,
               ),
@@ -112,7 +102,7 @@ class wnamkeen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "wafer",
+                                  "cold drink",
                                   style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.bold,
@@ -154,7 +144,7 @@ class wnamkeen extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Haldiram's bhujia is the most popular namkeen in India. ",
+                              "soft drink, any of a class of nonalcoholic beverages, usually but not necessarily carbonated, normally containing a natural or artificial sweetening agent, edible acids, natural or artificial flavours, and sometimes juice.",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -164,7 +154,7 @@ class wnamkeen extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Other than this, chana jorgaram, navratan mixture and moong dal are famous namkeens.",
+                              "Cold beverage means any non-alcoholic carbonated and non-carbonated cold beverage in a bottle, can, box, or post-drink mix from a fountain drink dispenser including soft drinks, isotonic beverages, teas, energy drinks, waters, enhanced waters, high-end specialty drinks, milks, dairy drinks, and juices.",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -208,7 +198,12 @@ class wnamkeen extends StatelessWidget {
           ),
         ),
       ])),
-     bottomNavigationBar: iteam_order(onPressed: () {  },),
+      bottomNavigationBar: iteam_order(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => ThankYouPage()));
+        },
+      ),
     );
   }
 }

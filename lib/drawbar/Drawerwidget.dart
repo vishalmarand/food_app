@@ -1,6 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_packet/Authenticattion/Email_login/Email_second/login_screen.dart';
+import 'package:food_packet/drawbar/aboutus.dart';
+import 'package:food_packet/drawbar/contactus.dart';
+import 'package:food_packet/drawbar/privacypolicy.dart';
+import 'package:food_packet/home_page/ShoppingCart.dart';
+import 'package:food_packet/home_page/walletscreen.dart';
 
 class Drawerwidget extends StatelessWidget {
   const Drawerwidget({super.key});
@@ -36,6 +41,10 @@ class Drawerwidget extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => ShoppingCart()));
+            },
             leading: Icon(
               CupertinoIcons.cart,
               color: Colors.black,
@@ -43,6 +52,10 @@ class Drawerwidget extends StatelessWidget {
             title: Text("MY ORDER"),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => Wallet()));
+            },
             leading: Icon(
               CupertinoIcons.person,
               color: Colors.black,
@@ -50,6 +63,10 @@ class Drawerwidget extends StatelessWidget {
             title: Text("My Account"),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => ContactUsPage()));
+            },
             leading: Icon(
               CupertinoIcons.headphones,
               color: Colors.black,
@@ -57,6 +74,10 @@ class Drawerwidget extends StatelessWidget {
             title: Text("Contact Us"),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => AboutUsPage()));
+            },
             leading: Icon(
               CupertinoIcons.info,
               color: Colors.black,
@@ -64,6 +85,10 @@ class Drawerwidget extends StatelessWidget {
             title: Text("about us"),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => PrivacyPolicyPage()));
+            },
             leading: Icon(
               CupertinoIcons.doc,
               color: Colors.black,

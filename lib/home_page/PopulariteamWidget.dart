@@ -1,9 +1,12 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:food_packet/home_page/NewestIteamWidget.dart';
-import 'package:food_packet/product_details/iteampage.dart';
+import 'package:food_packet/product_details/wcolddrink.dart';
+import 'package:food_packet/product_details/wfruit.dart';
+import 'package:food_packet/product_details/wwafer.dart';
 import 'package:food_packet/product_details/iteampage2.dart';
 import 'package:food_packet/product_details/wburger.dart';
+import 'package:food_packet/product_details/wwater.dart';
 
 class PopulariteamWidget extends StatelessWidget {
   @override
@@ -11,20 +14,20 @@ class PopulariteamWidget extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Row(children: [
             // for (int i = 0; i < 7; i++)
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
-                    width: 170,
-                    height: 200,
+                    width: 200,
+                    height: 150,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.grey.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
+                            color: Colors.white.withOpacity(0.5),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 3),
@@ -36,12 +39,11 @@ class PopulariteamWidget extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) => iteampage()));
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => wwafer()));
                             },
                             child: Container(
+                              alignment: Alignment.center,
                               child: Image.asset(
                                 "images/wafer.png",
                                 height: 100,
@@ -51,12 +53,12 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("Wafer",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
-                          Text("Taste our chips",
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)),
-                          SizedBox(
-                            height: 12,
-                          ),
+                          // Text("Taste our chips",
+                          //     style: TextStyle(
+                          //         fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
 
                           // Row(
                           //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,14 +88,14 @@ class PopulariteamWidget extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
-                    width: 170,
-                    height: 200,
+                    width: 200,
+                    height: 150,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.grey.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
+                            color: Colors.white.withOpacity(0.5),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 3),
@@ -105,12 +107,14 @@ class PopulariteamWidget extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (_) => wburger()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => wcolddrink()));
                             },
                             child: Container(
                               child: Image.asset(
-                                "images/colddrink.png",
+                                "images/c.png",
                                 height: 100,
                               ),
                             ),
@@ -118,12 +122,12 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("colddrink",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
-                          Text("Taste our Product",
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)),
-                          SizedBox(
-                            height: 12,
-                          ),
+                          // Text("Taste our Product",
+                          //     style: TextStyle(
+                          //         fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
                           // Row(
                           //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           //   children: [
@@ -145,14 +149,14 @@ class PopulariteamWidget extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 7),
                 child: Container(
-                    width: 170,
-                    height: 200,
+                    width: 200,
+                    height: 150,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.grey.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
+                            color: Colors.white.withOpacity(0.5),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 3),
@@ -164,14 +168,13 @@ class PopulariteamWidget extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) => Itemdata()));
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => wwater()));
                             },
                             child: Container(
+                              alignment: Alignment.bottomCenter,
                               child: Image.asset(
-                                "images/water.png",
+                                "images/w.png",
                                 height: 100,
                               ),
                             ),
@@ -179,12 +182,12 @@ class PopulariteamWidget extends StatelessWidget {
                           Text("water",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
-                          Text("Taste our product",
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)),
-                          SizedBox(
-                            height: 12,
-                          ),
+                          // Text("Taste our product",
+                          //     style: TextStyle(
+                          //         fontSize: 20, fontWeight: FontWeight.bold)),
+                          // SizedBox(
+                          //   height: 12,
+                          // ),
                           // Row(
                           //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           //   children: [

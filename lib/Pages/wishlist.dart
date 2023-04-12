@@ -1,6 +1,8 @@
 import 'package:clippy_flutter/arc.dart';
 import 'package:flutter/material.dart';
-import 'package:food_packet/product_details/iteampage.dart';
+import 'package:food_packet/product_details/wfruit.dart';
+import 'package:food_packet/product_details/wpizza.dart';
+import 'package:food_packet/product_details/wwafer.dart';
 import 'package:food_packet/product_details/wburger.dart';
 import 'package:food_packet/product_details/wdrink.dart';
 import 'package:food_packet/product_details/wnamkeen.dart';
@@ -21,13 +23,16 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
@@ -55,20 +60,24 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+             color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "iteampage");
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => wpizza()));
                 },
                 child: Container(
                   margin: EdgeInsets.all(10),
@@ -88,20 +97,24 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "iteampage");
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => wwafer()));
                 },
                 child: Container(
                   margin: EdgeInsets.all(10),
@@ -121,13 +134,16 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
@@ -155,20 +171,24 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "iteampage");
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => wfruit()));
                 },
                 child: Container(
                   margin: EdgeInsets.all(10),
@@ -188,13 +208,16 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
@@ -222,13 +245,16 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
@@ -256,20 +282,24 @@ class wishlist extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
           decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              //color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 8,
+                  color: Colors.white.withOpacity(0.5),
+                  //color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(0, 3),
                 )
               ]),
           child: Column(
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "iteampage");
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => wwafer()));
                 },
                 child: Container(
                   margin: EdgeInsets.all(10),

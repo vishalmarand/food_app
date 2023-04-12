@@ -2,7 +2,11 @@ import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:food_packet/product_details/iteampage.dart';
+import 'package:food_packet/product_details/wchocolate.dart';
+import 'package:food_packet/product_details/wcolddrink.dart';
+import 'package:food_packet/product_details/wfruit.dart';
+import 'package:food_packet/product_details/wsweets.dart';
+import 'package:food_packet/product_details/wwafer.dart';
 import 'package:food_packet/product_details/wdrink.dart';
 import 'package:food_packet/product_details/wwater.dart';
 
@@ -20,22 +24,23 @@ class NewestIteamWidget extends StatelessWidget {
                 width: 400,
                 height: 180,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => iteampage()));
+                              MaterialPageRoute(builder: (_) => wwafer()));
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -69,13 +74,13 @@ class NewestIteamWidget extends StatelessWidget {
                             itemPadding: EdgeInsets.symmetric(horizontal: 4),
                             itemBuilder: (context, _) => Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (index) {},
                           ),
                           Text("RS 10",
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -87,13 +92,14 @@ class NewestIteamWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FavoriteButton(
+                              iconColor: Colors.amber,
                               valueChanged: (_isFavorite) {
                                 print('Is Favorite $_isFavorite)');
                               },
                             ),
                             Icon(
                               CupertinoIcons.cart,
-                              color: Colors.red,
+                              color: Colors.amber,
                               size: 26,
                             )
                           ],
@@ -107,22 +113,23 @@ class NewestIteamWidget extends StatelessWidget {
                 width: 400,
                 height: 180,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => iteampage()));
+                              MaterialPageRoute(builder: (_) => wsweet()));
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -156,13 +163,13 @@ class NewestIteamWidget extends StatelessWidget {
                             itemPadding: EdgeInsets.symmetric(horizontal: 4),
                             itemBuilder: (context, _) => Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (index) {},
                           ),
                           Text("RS 10",
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -174,13 +181,14 @@ class NewestIteamWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FavoriteButton(
+                              iconColor: Colors.amber,
                               valueChanged: (_isFavorite) {
                                 print('Is Favorite $_isFavorite)');
                               },
                             ),
                             Icon(
                               CupertinoIcons.cart,
-                              color: Colors.red,
+                              color: Colors.amber,
                               size: 26,
                             )
                           ],
@@ -194,22 +202,23 @@ class NewestIteamWidget extends StatelessWidget {
                 width: 400,
                 height: 180,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => iteampage()));
+                              MaterialPageRoute(builder: (_) => wchocolate()));
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -231,7 +240,7 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
-                          Text("Taste our chips",
+                          Text("Taste our chocolate",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                           RatingBar.builder(
@@ -243,13 +252,13 @@ class NewestIteamWidget extends StatelessWidget {
                             itemPadding: EdgeInsets.symmetric(horizontal: 4),
                             itemBuilder: (context, _) => Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (index) {},
                           ),
                           Text("RS 10",
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -261,13 +270,14 @@ class NewestIteamWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FavoriteButton(
+                              iconColor: Colors.amber,
                               valueChanged: (_isFavorite) {
                                 print('Is Favorite $_isFavorite)');
                               },
                             ),
                             Icon(
                               CupertinoIcons.cart,
-                              color: Colors.red,
+                              color: Colors.amber,
                               size: 26,
                             )
                           ],
@@ -281,17 +291,18 @@ class NewestIteamWidget extends StatelessWidget {
                 width: 400,
                 height: 180,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                         onTap: () {
@@ -318,7 +329,7 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
-                          Text("Taste our chips",
+                          Text("Taste our product",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                           // SizedBox(
@@ -348,13 +359,13 @@ class NewestIteamWidget extends StatelessWidget {
                             itemPadding: EdgeInsets.symmetric(horizontal: 4),
                             itemBuilder: (context, _) => Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (index) {},
                           ),
                           Text("RS 10",
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -372,7 +383,7 @@ class NewestIteamWidget extends StatelessWidget {
                             ),
                             Icon(
                               CupertinoIcons.cart,
-                              color: Colors.red,
+                              color: Colors.amber,
                               size: 26,
                             )
                           ],
@@ -386,22 +397,23 @@ class NewestIteamWidget extends StatelessWidget {
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wwater()));
+                              MaterialPageRoute(builder: (_) => wcolddrink()));
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -423,7 +435,7 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
-                          Text("Taste our chips",
+                          Text("Taste our drink",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                           // SizedBox(
@@ -449,13 +461,13 @@ class NewestIteamWidget extends StatelessWidget {
                             itemPadding: EdgeInsets.symmetric(horizontal: 4),
                             itemBuilder: (context, _) => Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (index) {},
                           ),
                           Text("RS 10",
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -467,13 +479,14 @@ class NewestIteamWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FavoriteButton(
+                              iconColor: Colors.amber,
                               valueChanged: (_isFavorite) {
                                 print('Is Favorite $_isFavorite)');
                               },
                             ),
                             Icon(
                               CupertinoIcons.cart,
-                              color: Colors.red,
+                              color: Colors.amber,
                               size: 26,
                             )
                           ],
@@ -487,17 +500,18 @@ class NewestIteamWidget extends StatelessWidget {
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                         onTap: () {
@@ -524,9 +538,9 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
-                          Text("Taste our chips",
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                          // Text("Taste our chips",
+                          //     style: TextStyle(
+                          //         fontSize: 20, fontWeight: FontWeight.bold)),
                           // SizedBox(
                           //   height: 12,
                           // ),
@@ -554,13 +568,13 @@ class NewestIteamWidget extends StatelessWidget {
                             itemPadding: EdgeInsets.symmetric(horizontal: 4),
                             itemBuilder: (context, _) => Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (index) {},
                           ),
                           Text("RS 10",
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -572,13 +586,14 @@ class NewestIteamWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FavoriteButton(
+                              iconColor: Colors.amber,
                               valueChanged: (_isFavorite) {
                                 print('Is Favorite $_isFavorite)');
                               },
                             ),
                             Icon(
                               CupertinoIcons.cart,
-                              color: Colors.red,
+                              color: Colors.amber,
                               size: 26,
                             )
                           ],
@@ -592,22 +607,23 @@ class NewestIteamWidget extends StatelessWidget {
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wwater()));
+                              MaterialPageRoute(builder: (_) => wfruit()));
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -629,7 +645,7 @@ class NewestIteamWidget extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               )),
-                          Text("Taste our chips",
+                          Text("Taste our product",
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                           // SizedBox(
@@ -659,13 +675,13 @@ class NewestIteamWidget extends StatelessWidget {
                             itemPadding: EdgeInsets.symmetric(horizontal: 4),
                             itemBuilder: (context, _) => Icon(
                               Icons.star,
-                              color: Colors.red,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (index) {},
                           ),
                           Text("RS 10",
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
@@ -677,13 +693,14 @@ class NewestIteamWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FavoriteButton(
+                              iconColor: Colors.amber,
                               valueChanged: (_isFavorite) {
                                 print('Is Favorite $_isFavorite)');
                               },
                             ),
                             Icon(
                               CupertinoIcons.cart,
-                              color: Colors.red,
+                              color: Colors.amber,
                               size: 26,
                             )
                           ],

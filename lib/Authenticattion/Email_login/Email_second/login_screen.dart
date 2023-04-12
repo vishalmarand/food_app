@@ -97,7 +97,6 @@ class _login_ScreenState extends State<login_Screen> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
             )));
-            
 
     final loginButton = Material(
       elevation: 5,
@@ -113,7 +112,7 @@ class _login_ScreenState extends State<login_Screen> {
             "Login",
             textAlign: TextAlign.center,
             style: TextStyle(
-                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+                fontSize: 18, color: Colors.amber, fontWeight: FontWeight.bold),
           )),
     );
 
@@ -121,7 +120,7 @@ class _login_ScreenState extends State<login_Screen> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("images/diam.png"),
+          image: AssetImage("images/bgf.jpg"),
           fit: BoxFit.cover,
         )),
         child: Center(
@@ -142,7 +141,9 @@ class _login_ScreenState extends State<login_Screen> {
                           style: GoogleFonts.roboto(
                               fontSize: 42,
                               fontWeight: FontWeight.bold,
-                              color: Color(hexColor('#1B70D6'))))),
+                              color: Colors.amber
+                              //(hexColor('#1B70D6'))
+                              ))),
                   emailfield,
                   SizedBox(
                     height: 25,
@@ -162,7 +163,8 @@ class _login_ScreenState extends State<login_Screen> {
                       padding: new EdgeInsets.all(10.0),
                       child: new Text(
                           style: GoogleFonts.roboto(
-                              color: Color(hexColor('#1B70D6')),
+                              color: Colors.amber,
+                              //(hexColor('#1B70D6')),
                               fontWeight: FontWeight.w900,
                               fontSize: 15),
                           "Login with Phone Number"),
@@ -189,7 +191,8 @@ class _login_ScreenState extends State<login_Screen> {
                         child: Text(
                           "sign up",
                           style: GoogleFonts.roboto(
-                              color: Color(hexColor('#1B70D6')),
+                              color: Colors.amber,
+                              //(hexColor('#1B70D6')),
                               fontWeight: FontWeight.w900,
                               fontSize: 15),
                         ),

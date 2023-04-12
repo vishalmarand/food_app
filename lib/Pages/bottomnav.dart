@@ -28,6 +28,7 @@ class _bottomnavState extends State<bottomnav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,

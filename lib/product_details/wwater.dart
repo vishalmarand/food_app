@@ -2,6 +2,7 @@ import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:food_packet/model/ordersuccesfull.dart';
 import 'package:food_packet/product_details/iteam_product_order.dart';
 
 class wwater extends StatelessWidget {
@@ -22,14 +23,23 @@ class wwater extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.white,
+        // leading: IconButton(
+        //   icon: const Icon(
+        //     Icons.arrow_back,
+        //   ),
+        //   color: Colors.black,
+        //   onPressed: () {
+        //     // Navigator.push(
+        //     // context, MaterialPageRoute(builder: (_) => Vegetable()));
+        //   },
+        // ),
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
           ),
           color: Colors.black,
           onPressed: () {
-            // Navigator.push(
-            // context, MaterialPageRoute(builder: (_) => Vegetable()));
+            Navigator.pop(context);
           },
         ),
       ),
@@ -41,7 +51,7 @@ class wwater extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Image.asset(
-                "images/water.png",
+                "images/w.png",
                 height: 300,
                 width: 300,
               ),
@@ -51,7 +61,8 @@ class wwater extends StatelessWidget {
                   height: 30,
                   child: Container(
                     width: double.infinity,
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
+                    //color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -127,6 +138,14 @@ class wwater extends StatelessWidget {
                                         "1",
                                         style: TextStyle(),
                                       ),
+                                      Text(
+                                        "2",
+                                        style: TextStyle(),
+                                      ),
+                                      Text(
+                                        "3",
+                                        style: TextStyle(),
+                                      ),
                                       Icon(
                                         CupertinoIcons.plus,
                                         color: Colors.white,
@@ -143,7 +162,7 @@ class wwater extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Taste our chips i is good your heath and it is very testy try this product,",
+                              "Pure water is water that has been processed to remove any impurities it contains. ",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -153,7 +172,7 @@ class wwater extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Taste our chips i is good your heath and it is very testy try this product,",
+                              "Water is such a good solvent; it naturally holds these substances. However, Water Impurities can negatively impact the accuracy of an application and make your results unreliable.",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -197,7 +216,15 @@ class wwater extends StatelessWidget {
           ),
         ),
       ])),
-      bottomNavigationBar: iteam_order(),
+      bottomNavigationBar: iteam_order(
+        onPressed: () {
+          //onTap:
+          () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ThankYouPage()),
+              );
+        },
+      ),
     );
   }
 }

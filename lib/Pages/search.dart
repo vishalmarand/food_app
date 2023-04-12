@@ -4,10 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:food_packet/product_details/iteampage.dart';
+import 'package:food_packet/product_details/wcolddrink.dart';
+import 'package:food_packet/product_details/wfruit.dart';
+import 'package:food_packet/product_details/wwafer.dart';
 import 'package:food_packet/product_details/wburger.dart';
 import 'package:food_packet/product_details/wdrink.dart';
 import 'package:food_packet/product_details/wnamkeen.dart';
+import 'package:food_packet/product_details/wwafer.dart';
+import 'package:food_packet/product_details/wwater.dart';
 
 class search extends StatelessWidget {
   const search({Key? key}) : super(key: key);
@@ -67,89 +71,96 @@ class search extends StatelessWidget {
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(20),
+                    //color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
+                        //color: Colors.black.withOpacity(0.4),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
+                //       child: Row(
+                //         children: [
+                //           InkWell(
+                //               onTap: () {
+                //                 Navigator.push(context,
+                //                     MaterialPageRoute(builder: (_) => wnamkeen()));
+                //               },
+                //               child: Container(
+                //                 alignment: Alignment.center,
+                //                 child: Image.network(
+                //                   'https://www.google.com/url?sa=i&url=https%3A%2F%2Fkhodalmart.in%2Findex.php%2Fproduct%2Fbalaji-crunchex-chilli-tadka-40gm%2F&psig=AOvVaw3efntQfn-CqN1USmWmw_2G&ust=1678599990989000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNC39bOW0_0CFQAAAAAdAAAAABAJ',
+                //                   width: 150.0,
+                //                 ),
+                //               )),
+                //           Container(
+                //             width: 190,
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //               children: [
+                //                 Text("crunchex chilli tadka",
+                //                     style: TextStyle(
+                //                       fontSize: 22,
+                //                       fontWeight: FontWeight.bold,
+                //                     )),
+                //                 RatingBar.builder(
+                //                   initialRating: 4,
+                //                   minRating: 1,
+                //                   direction: Axis.horizontal,
+                //                   itemCount: 5,
+                //                   itemSize: 18,
+                //                   itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                //                   itemBuilder: (context, _) => Icon(
+                //                     Icons.star,
+                //                     color: Colors.red,
+                //                   ),
+                //                   onRatingUpdate: (index) {},
+                //                 )
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     )),
+                // Padding(
+                //     padding: EdgeInsets.symmetric(vertical: 10),
+                //     child: Container(
+                //       width: 380,
+                //       height: 150,
+                //       decoration: BoxDecoration(
+                //           color: Colors.white,
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //               color: Colors.grey.withOpacity(0.5),
+                //               spreadRadius: 3,
+                //               blurRadius: 10,
+                //               offset: Offset(0, 3),
+                //             )
+                //           ]),
                 child: Row(
                   children: [
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wnamkeen()));
+                              MaterialPageRoute(builder: (_) => wwafer()));
                         },
                         child: Container(
                           alignment: Alignment.center,
-                          child: Image.network(
-                            'https://www.salesforce.com/content/dam/web/en_in/www/images/customers/balaji-wafers-main-image.jpg',
-                            width: 150.0,
+                          child: Image.asset(
+                            "images/wafer.png",
+                            height: 100,
+                            width: 130,
                           ),
-                        )),
-                    Container(
-                      width: 190,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text("balaji chat chaska",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              )),
-                          RatingBar.builder(
-                            initialRating: 4,
-                            minRating: 1,
-                            direction: Axis.horizontal,
-                            itemCount: 5,
-                            itemSize: 18,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.red,
-                            ),
-                            onRatingUpdate: (index) {},
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )),
-          Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: Offset(0, 3),
-                      )
-                    ]),
-                child: Row(
-                  children: [
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => iteampage()));
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: Image.network(
-                            'https://cdn3.mydukaan.io/app/image/700x700/?url=https://projecteagle.s3.ap-south-1.amazonaws.com/images/ff3604ee-001c-4e22-a490-c7d1105b443c.jpg',
-                            width: 150.0,
-                          ),
+                          // child: Image.network(
+                          //   'https://cdn3.mydukaan.io/app/image/700x700/?url=https://projecteagle.s3.ap-south-1.amazonaws.com/images/ff3604ee-001c-4e22-a490-c7d1105b443c.jpg',
+                          //   width: 150.0,
+                          // ),
                         )),
                     Container(
                       width: 190,
@@ -181,17 +192,146 @@ class search extends StatelessWidget {
                   ],
                 ),
               )),
+          // Padding(
+          //     padding: EdgeInsets.symmetric(vertical: 10),
+          //     child: Container(
+          //       width: 380,
+          //       height: 150,
+          //       decoration: BoxDecoration(
+          //           color: Colors.grey.withOpacity(0.3),
+          //           borderRadius: BorderRadius.circular(20),
+          //           //color: Colors.white,
+          //           boxShadow: [
+          //             BoxShadow(
+          //               color: Colors.white.withOpacity(0.5),
+          //               //color: Colors.black.withOpacity(0.4),
+          //               spreadRadius: 3,
+          //               blurRadius: 10,
+          //               offset: Offset(0, 3),
+          //             )
+          //           ]),
+                //       child: Row(
+                //         children: [
+                //           InkWell(
+                //               onTap: () {
+                //                 Navigator.push(context,
+                //                     MaterialPageRoute(builder: (_) => wwafer()));
+                //               },
+                //               child: Container(
+                //                 alignment: Alignment.center,
+                //                 child: Image.network(
+                //                   'https://pbs.twimg.com/media/EsF6qEgVoAYY8ot.jpg',
+                //                   width: 150.0,
+                //                 ),
+                //               )),
+                //           Container(
+                //             width: 190,
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //               children: [
+                //                 Text("combo products",
+                //                     style: TextStyle(
+                //                       fontSize: 22,
+                //                       fontWeight: FontWeight.bold,
+                //                     )),
+                //                 RatingBar.builder(
+                //                   initialRating: 4,
+                //                   minRating: 1,
+                //                   direction: Axis.horizontal,
+                //                   itemCount: 5,
+                //                   itemSize: 18,
+                //                   itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                //                   itemBuilder: (context, _) => Icon(
+                //                     Icons.star,
+                //                     color: Colors.red,
+                //                   ),
+                //                   onRatingUpdate: (index) {},
+                //                 )
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     )),
+                // Padding(
+                //     padding: EdgeInsets.symmetric(vertical: 10),
+                //     child: Container(
+                //       width: 380,
+                //       height: 150,
+                //       decoration: BoxDecoration(
+                //           color: Colors.white,
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //               color: Colors.grey.withOpacity(0.5),
+                //               spreadRadius: 3,
+                //               blurRadius: 10,
+                //               offset: Offset(0, 3),
+                //             )
+                //           ]),
+                // child: Row(
+                //   children: [
+                //     InkWell(
+                //         onTap: () {
+                //           Navigator.push(context,
+                //               MaterialPageRoute(builder: (_) => wwafer()));
+                //         },
+                //         child: Container(
+                //           alignment: Alignment.center,
+                //           child: Image.asset(
+                //             "images/wafer.png",
+                //             height: 100,
+                //             width: 130,
+                //           ),
+                //           // child: Image.network(
+                //           //   'https://www.jiomart.com/images/product/original/490025526/balaji-masala-masti-wafers-45-g-product-images-o490025526-p490025526-0-202203150317.jpg',
+                //           //   width: 150.0,
+                //           // ),
+                //         )),
+                //     Container(
+                //       width: 190,
+                //       child: Column(
+                //         crossAxisAlignment: CrossAxisAlignment.start,
+                //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //         children: [
+                //           Text("spicy wafer",
+                //               style: TextStyle(
+                //                 fontSize: 22,
+                //                 fontWeight: FontWeight.bold,
+                //               )),
+                //           RatingBar.builder(
+                //             initialRating: 4,
+                //             minRating: 1,
+                //             direction: Axis.horizontal,
+                //             itemCount: 5,
+                //             itemSize: 18,
+                //             itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                //             itemBuilder: (context, _) => Icon(
+                //               Icons.star,
+                //               color: Colors.red,
+                //             ),
+                //             onRatingUpdate: (index) {},
+                //           )
+                //         ],
+                //       ),
+                //     ),
+                //   ],
+                // ),
+              // )),
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(20),
+                    //color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
+                        //color: Colors.black.withOpacity(0.4),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
@@ -202,132 +342,12 @@ class search extends StatelessWidget {
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wburger()));
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: Image.network(
-                            'https://pbs.twimg.com/media/EsF6qEgVoAYY8ot.jpg',
-                            width: 150.0,
-                          ),
-                        )),
-                    Container(
-                      width: 190,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text("combo products",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              )),
-                          RatingBar.builder(
-                            initialRating: 4,
-                            minRating: 1,
-                            direction: Axis.horizontal,
-                            itemCount: 5,
-                            itemSize: 18,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.red,
-                            ),
-                            onRatingUpdate: (index) {},
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )),
-          Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: Offset(0, 3),
-                      )
-                    ]),
-                child: Row(
-                  children: [
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wdrink()));
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: Image.network(
-                            'https://www.jiomart.com/images/product/original/490025526/balaji-masala-masti-wafers-45-g-product-images-o490025526-p490025526-0-202203150317.jpg',
-                            width: 150.0,
-                          ),
-                        )),
-                    Container(
-                      width: 190,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text("spicy wafer",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              )),
-                          RatingBar.builder(
-                            initialRating: 4,
-                            minRating: 1,
-                            direction: Axis.horizontal,
-                            itemCount: 5,
-                            itemSize: 18,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.red,
-                            ),
-                            onRatingUpdate: (index) {},
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )),
-          Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: Offset(0, 3),
-                      )
-                    ]),
-                child: Row(
-                  children: [
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wnamkeen()));
+                              MaterialPageRoute(builder: (_) => wwater()));
                         },
                         child: Container(
                           alignment: Alignment.center,
                           child: Image.asset(
-                            "images/water.png",
+                            "images/w.png",
                             height: 100,
                             width: 130,
                           ),
@@ -369,76 +389,78 @@ class search extends StatelessWidget {
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(20),
+                    //color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
+                        //color: Colors.black.withOpacity(0.4),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
                       )
                     ]),
-                child: Row(
-                  children: [
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wdrink()));
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: Image.network(
-                            'https://www.salesforce.com/content/dam/web/en_in/www/images/customers/balaji-wafers-main-image.jpg',
-                            width: 150.0,
-                          ),
-                        )),
-                    Container(
-                      width: 190,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text("combo ",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              )),
-                          RatingBar.builder(
-                            initialRating: 4,
-                            minRating: 1,
-                            direction: Axis.horizontal,
-                            itemCount: 5,
-                            itemSize: 18,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.red,
-                            ),
-                            onRatingUpdate: (index) {},
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )),
-          Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: Offset(0, 3),
-                      )
-                    ]),
+                //       child: Row(
+                //         children: [
+                //           InkWell(
+                //               onTap: () {
+                //                 Navigator.push(context,
+                //                     MaterialPageRoute(builder: (_) => wwafer()));
+                //               },
+                //               child: Container(
+                //                 alignment: Alignment.center,
+                //                 child: Image.network(
+                //                   'https://www.salesforce.com/content/dam/web/en_in/www/images/customers/balaji-wafers-main-image.jpg',
+                //                   width: 150.0,
+                //                 ),
+                //               )),
+                //           Container(
+                //             width: 190,
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //               children: [
+                //                 Text("combo ",
+                //                     style: TextStyle(
+                //                       fontSize: 22,
+                //                       fontWeight: FontWeight.bold,
+                //                     )),
+                //                 RatingBar.builder(
+                //                   initialRating: 4,
+                //                   minRating: 1,
+                //                   direction: Axis.horizontal,
+                //                   itemCount: 5,
+                //                   itemSize: 18,
+                //                   itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                //                   itemBuilder: (context, _) => Icon(
+                //                     Icons.star,
+                //                     color: Colors.red,
+                //                   ),
+                //                   onRatingUpdate: (index) {},
+                //                 )
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     )),
+                // Padding(
+                //     padding: EdgeInsets.symmetric(vertical: 10),
+                //     child: Container(
+                //       width: 380,
+                //       height: 150,
+                //       decoration: BoxDecoration(
+                //           color: Colors.white,
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //               color: Colors.grey.withOpacity(0.5),
+                //               spreadRadius: 3,
+                //               blurRadius: 10,
+                //               offset: Offset(0, 3),
+                //             )
+                //           ]),
                 child: Row(
                   children: [
                     InkWell(
@@ -449,7 +471,7 @@ class search extends StatelessWidget {
                         child: Container(
                           alignment: Alignment.center,
                           child: Image.asset(
-                            "images/wafer.png",
+                            "images/namkeen.png",
                             height: 100,
                             width: 130,
                           ),
@@ -460,7 +482,7 @@ class search extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text("WAFER",
+                          Text("namkeen",
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -490,11 +512,13 @@ class search extends StatelessWidget {
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(20),
+                    //color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
+                        //color: Colors.black.withOpacity(0.4),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
@@ -551,11 +575,13 @@ class search extends StatelessWidget {
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(20),
+                    //color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
+                        //color: Colors.black.withOpacity(0.4),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
@@ -566,12 +592,12 @@ class search extends StatelessWidget {
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wburger()));
+                              MaterialPageRoute(builder: (_) => wcolddrink()));
                         },
                         child: Container(
                           alignment: Alignment.center,
                           child: Image.asset(
-                            "images/colddrink.png",
+                            "images/c.png",
                             height: 100,
                             width: 130,
                           ),
@@ -606,17 +632,82 @@ class search extends StatelessWidget {
                   ],
                 ),
               )),
+          // Padding(
+          //     padding: EdgeInsets.symmetric(vertical: 10),
+          //     child: Container(
+          //       width: 380,
+          //       height: 150,
+          //       decoration: BoxDecoration(
+          //           color: Colors.grey.withOpacity(0.3),
+          //           borderRadius: BorderRadius.circular(20),
+          //           //color: Colors.white,
+          //           boxShadow: [
+          //             BoxShadow(
+          //               color: Colors.white.withOpacity(0.5),
+          //               //color: Colors.black.withOpacity(0.4),
+          //               spreadRadius: 3,
+          //               blurRadius: 10,
+          //               offset: Offset(0, 3),
+          //             )
+          //           ]),
+          //       // child: Row(
+          //       //   children: [
+          //       //     InkWell(
+          //       //         onTap: () {
+          //       //           Navigator.push(context,
+          //       //               MaterialPageRoute(builder: (_) => wwater()));
+          //       //         },
+          //       //         child: Container(
+          //       //           alignment: Alignment.center,
+          //       //           child: Image.asset(
+          //       //             "images/water.png",
+          //       //             height: 100,
+          //       //             width: 130,
+          //       //           ),
+          //       //         )),
+          //       //     Container(
+          //       //       width: 190,
+          //       //       child: Column(
+          //       //         crossAxisAlignment: CrossAxisAlignment.start,
+          //       //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //       //         children: [
+          //       //           Text("water",
+          //       //               style: TextStyle(
+          //       //                 fontSize: 22,
+          //       //                 fontWeight: FontWeight.bold,
+          //       //               )),
+          //       //           RatingBar.builder(
+          //       //             initialRating: 4,
+          //       //             minRating: 1,
+          //       //             direction: Axis.horizontal,
+          //       //             itemCount: 5,
+          //       //             itemSize: 18,
+          //       //             itemPadding: EdgeInsets.symmetric(horizontal: 4),
+          //       //             itemBuilder: (context, _) => Icon(
+          //       //               Icons.star,
+          //       //               color: Colors.red,
+          //       //             ),
+          //       //             onRatingUpdate: (index) {},
+          //       //           )
+          //       //         ],
+          //       //       ),
+          //       //     ),
+          //       //   ],
+          //       // ),
+          //     )),
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
                 width: 380,
                 height: 150,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(20),
+                    //color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.white.withOpacity(0.5),
+                        //color: Colors.black.withOpacity(0.4),
                         spreadRadius: 3,
                         blurRadius: 10,
                         offset: Offset(0, 3),
@@ -627,68 +718,7 @@ class search extends StatelessWidget {
                     InkWell(
                         onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wdrink()));
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: Image.asset(
-                            "images/water.png",
-                            height: 100,
-                            width: 130,
-                          ),
-                        )),
-                    Container(
-                      width: 190,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text("water",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              )),
-                          RatingBar.builder(
-                            initialRating: 4,
-                            minRating: 1,
-                            direction: Axis.horizontal,
-                            itemCount: 5,
-                            itemSize: 18,
-                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: Colors.red,
-                            ),
-                            onRatingUpdate: (index) {},
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )),
-          Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 10,
-                        offset: Offset(0, 3),
-                      )
-                    ]),
-                child: Row(
-                  children: [
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => wnamkeen()));
+                              MaterialPageRoute(builder: (_) => wfruit()));
                         },
                         child: Container(
                           alignment: Alignment.center,

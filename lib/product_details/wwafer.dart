@@ -5,19 +5,51 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:food_packet/home_page/AppBarWidget.dart';
+import 'package:food_packet/model/ordersuccesfull.dart';
 import 'package:food_packet/product_details/iteam_product_order.dart';
 
-class iteampage extends StatelessWidget {
-  const iteampage({super.key});
+class wwafer extends StatelessWidget {
+  const wwafer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
+        title: Text(
+          "DRINK",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        // leading: IconButton(
+        //   icon: const Icon(
+        //     Icons.arrow_back,
+        //   ),
+        //   color: Colors.black,
+        //   onPressed: () {
+        //     // Navigator.push(
+        //     // context, MaterialPageRoute(builder: (_) => Vegetable()));
+        //   },
+        // ),
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+          ),
+          color: Colors.black,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: Padding(
         padding: EdgeInsets.only(top: 5),
         child: ListView(
           children: [
-            AppBarWidget(),
             Padding(
               padding: EdgeInsets.all(16),
               child: Image.asset(
@@ -32,7 +64,8 @@ class iteampage extends StatelessWidget {
                 height: 30,
                 child: Container(
                   width: double.infinity,
-                  color: Colors.white,
+                  color: Colors.grey.withOpacity(0.3),
+                  //color: Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -176,7 +209,9 @@ class iteampage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: iteam_order(),
+      bottomNavigationBar: iteam_order(
+        onPressed: () {},
+      ),
     );
   }
 }

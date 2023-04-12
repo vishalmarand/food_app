@@ -5,8 +5,9 @@ import 'package:food_packet/Authenticattion/introduction_screen.dart';
 import 'package:food_packet/Authenticattion/phone_login/phone.dart';
 
 import 'package:food_packet/Pages/bottomnav.dart';
+import 'package:food_packet/product_details/detailed_screen.dart';
 
-import 'package:food_packet/product_details/iteampage.dart';
+import 'package:food_packet/product_details/wwafer.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       routes: {
-        "/": (context) => introduction(),
+        "/": (context) => bottomnav(),
         //for phon login
         //"/": (context) => MyPhone(),
         //homepage direct

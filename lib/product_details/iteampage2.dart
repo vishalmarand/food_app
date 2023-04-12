@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:food_packet/home_page/AppBarWidget.dart';
+import 'package:food_packet/model/ordersuccesfull.dart';
 import 'package:food_packet/product_details/iteam_product_order.dart';
 
 class Itemdata extends StatelessWidget {
@@ -198,7 +199,12 @@ class Itemdata extends StatelessWidget {
           ),
         ),
       ])),
-      bottomNavigationBar: iteam_order(),
+       bottomNavigationBar: iteam_order(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => ThankYouPage()));
+        },
+      ),
     );
   }
 }

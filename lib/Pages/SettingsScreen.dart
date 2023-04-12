@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:food_packet/apis/category_apis.dart';
-import 'package:food_packet/model/category_data_model.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -27,8 +26,8 @@ class SettingsScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading:const  Icon(Icons.security),
-            title:const  Text('Security'),
+            leading: const Icon(Icons.security),
+            title: const Text('Security'),
             onTap: () {
               // Navigate to security settings
             },

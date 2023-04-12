@@ -2,6 +2,7 @@ import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:food_packet/model/ordersuccesfull.dart';
 import 'package:food_packet/product_details/iteam_product_order.dart';
 
 class wburger extends StatelessWidget {
@@ -21,15 +22,22 @@ class wburger extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        //backgroundColor: Colors.grey.withOpacity(0.3),
         backgroundColor: Colors.white,
+        // leading: IconButton(
+        //   onPressed: () {
+        //     Navigator.pop(context);
+        //   },
+        //   icon: Icon(Icons.arrow_back_ios),
+        //   //replace with our own icon data.
+        // )
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
           ),
           color: Colors.black,
           onPressed: () {
-            // Navigator.push(
-            // context, MaterialPageRoute(builder: (_) => Vegetable()));
+            Navigator.pop(context);
           },
         ),
       ),
@@ -51,7 +59,8 @@ class wburger extends StatelessWidget {
                   height: 30,
                   child: Container(
                     width: double.infinity,
-                    color: Colors.white,
+                    color: Colors.grey.withOpacity(0.3),
+                    //color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -143,7 +152,7 @@ class wburger extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Taste our chips i is good your heath and it is very testy try this product,",
+                              "A burger is a flat round mass of minced meat or vegetables, which is fried and often eaten in a bread roll.",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -153,7 +162,7 @@ class wburger extends StatelessWidget {
                               vertical: 10,
                             ),
                             child: Text(
-                              "Taste our chips i is good your heath and it is very testy try this product,",
+                              "Sink your teeth into a delicious restaurant-style, hamburger recipe made from lean beef. Skip the prepackaged patties and take the extra time to craft up your own, and that little extra effort will be worth it. To make cheeseburgers, about 1 minute before burgers are done, top with sliced cheese; continue cooking until cheese begins to melt.",
                               style: TextStyle(fontSize: 16),
                               textAlign: TextAlign.justify,
                             ),
@@ -197,7 +206,12 @@ class wburger extends StatelessWidget {
           ),
         ),
       ])),
-      bottomNavigationBar: iteam_order(),
+      bottomNavigationBar: iteam_order(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => ThankYouPage()));
+        },
+      ),
     );
   }
 }

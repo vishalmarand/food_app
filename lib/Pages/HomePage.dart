@@ -7,7 +7,6 @@ import 'package:food_packet/causal_slider.dart';
 import 'package:food_packet/home_page/AppBarWidget.dart';
 import 'package:food_packet/drawbar/Drawerwidget.dart';
 import 'package:food_packet/home_page/NewestIteamWidget.dart';
-import 'package:food_packet/home_page/appbar_image.dart';
 import 'package:food_packet/home_page/ShoppingCart.dart';
 import 'package:food_packet/home_page/walletscreen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -18,18 +17,26 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        // leading: IconButton(
+        //     onPressed: () {
+        //       Navigator.push(
+        //           context, MaterialPageRoute(builder: (_) => Wallet()));
+        //     },
+        //     icon: Icon(Icons.wallet_rounded)),
         backgroundColor: Colors.amber,
         centerTitle: true,
-        title: Text("Food App"),
+        title: Text("Food & Bevarage App"),
         actions: [
           // action button
           IconButton(
-            icon: Image.asset('images/wallet.png'),
+            // icon: Image.asset('images/wallet.png'),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (_) => Wallet()));
             },
+            icon: Icon(Icons.wallet_rounded),
           ),
         ],
         // leading: IconButton(
@@ -68,7 +75,10 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: NetworkImage(
-                        "https://www.salesforce.com/content/dam/web/en_in/www/images/customers/balaji-wafers-main-image.jpg"),
+                        "https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        //"https://www.pexels.com/photo/fries-and-dipping-sauce-1893555/"
+                        //"https://www.salesforce.com/content/dam/web/en_in/www/images/customers/balaji-wafers-main-image.jpg"
+                        ),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -81,7 +91,7 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: NetworkImage(
-                        "https://pbs.twimg.com/media/EsF6qEgVoAYY8ot.jpg"),
+                        "https://images.pexels.com/photos/479628/pexels-photo-479628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -94,7 +104,7 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: NetworkImage(
-                        "https://pbs.twimg.com/media/EsF6qEgVoAYY8ot.jpg"),
+                        "https://images.pexels.com/photos/1239347/pexels-photo-1239347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -107,7 +117,7 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: NetworkImage(
-                        "https://www.salesforce.com/content/dam/web/en_in/www/images/customers/balaji-wafers-main-image.jpg"),
+                        "https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -120,7 +130,7 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: NetworkImage(
-                        "https://www.salesforce.com/content/dam/web/en_in/www/images/customers/balaji-wafers-main-image.jpg"),
+                        "https://images.pexels.com/photos/4389673/pexels-photo-4389673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -198,7 +208,10 @@ class HomePage extends StatelessWidget {
             child: Icon(
               CupertinoIcons.cart,
               size: 28,
+              color: Colors.white,
+             
             ),
+             backgroundColor:Colors.amber
           )),
 
       // extendBodyBehindAppBar: true,
